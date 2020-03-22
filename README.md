@@ -1,0 +1,2 @@
+# CounterHomework
+Android Lab exercise.
