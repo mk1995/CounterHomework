@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         btnCount = findViewById(R.id.btnCount);
         editText = findViewById(R.id.editText);
-
-
         btnCount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        setContentView(R.layout.activity_main);
-        UI();
     }
 
     @Override
@@ -56,12 +52,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        {
-
-            textView.setText("" + savedInstanceState.getString("key_name"));
-            mCount = savedInstanceState.getInt("count");
-
-        }
+        textView.setText("" + savedInstanceState.getString("key_name"));
+        mCount = savedInstanceState.getInt("count");
     }
 
     public void countUp () {
